@@ -26,7 +26,7 @@ function agregarPelicula() {
     };
     listaPeliculas.push(datosPelicula);
 
-    // Se llama a obtenerEmoji para saber qué poner al lado de la nota
+    // Se llama a obtenerEmoji y se guarda en una variable para para ponerlo al lado de la nota
     let emoji = obtenerEmoji(puntuacion);
 
     const nuevaFila = document.createElement('tr');
