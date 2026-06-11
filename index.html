@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Películas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Registro de Películas</h1>
+
+    <div class="EntradasInformacion">
+        <label for="titulo">Título</label>
+        <input type="text" id="titulo" placeholder="Ej: 13 horas los soldados secretos de Bengasi">
+
+        <label for="duracion">Duración (minutos)</label>
+        <input type="number" id="duracion" placeholder="Ej: 120" min="1">
+
+        <label>Puntuación</label>
+        <div class="fila-slider">
+            <input type="range" id="puntuacion" min="0" max="10" step="0.1" value="5">
+            <span id="valorPuntuacion">5</span>
+        </div>
+
+        <button onclick="agregarPelicula()">Registrar Película</button>
+    </div>
+
+    <div class="contenedor-tabla">
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Duración</th>
+                    <th>Puntuación</th>
+                </tr>
+            </thead>
+            <tbody id="tabla"></tbody>
+            <tfoot>
+                <tr class="fila-media">
+                    <td colspan="2">Puntuación media</td>
+                    <td id="mediaPuntuacion">—</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <!-- Botón para exportar la tabla a CSV -->
+        <button id="botonCSV" onclick="exportarCSV()">Exportar a CSV</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
